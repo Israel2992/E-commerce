@@ -1,0 +1,49 @@
+.Navbar {
+    display: flex;
+    width: 95vw;
+    height: 8vh;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#B9B4D9;
+    border-radius: 2rem;
+
+}
+
+.titulo{
+    height: 100%;
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titulo h3{
+    font-size: 1.5rem;
+}
+
+.titulo img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.categorias{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.opcion{
+    height: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: white;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+
+.opcion:hover {
+    background-color: #B9B4D9;
+}

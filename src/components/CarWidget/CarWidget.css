@@ -1,0 +1,17 @@
+
+.CarWidget{
+    display: flex;
+    width: 10%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.CarWidget p{
+    font-size: 1.5rem;
+}
