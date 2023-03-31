@@ -2,7 +2,7 @@ import React,{Fragment, useState} from "react";
 import './productos.css'
 
 
-const Productos = ({img,text,cantidad,handleTotal}) => {
+const Productos = ({img,text,cantidad,handlesumar,handlerestar}) => {
 
 
     const [count,setCount] = useState(cantidad)
@@ -11,17 +11,17 @@ const Productos = ({img,text,cantidad,handleTotal}) => {
     const agregarCarrito = () => {
         if(count > 0){
             setCount(count -1 );
-            handleTotal();
+            handlesumar();
         }
         else{
             alert("No queda stock")
         }
     }
 
-    // const eliminarCarrito = () => {
-    //     setCount(count +1);
-    //     handleTotal();
-    // }
+    const eliminarCarrito = () => {
+        setCount(count +1);
+        handlerestar();
+    }
 
 
     return (
@@ -30,7 +30,7 @@ const Productos = ({img,text,cantidad,handleTotal}) => {
             <p>{text}</p>
             <p> Disponible :{count}</p>
             <button onClick={agregarCarrito}>Agregar al Carrito</button>
-            {/* <button onClick={eliminarCarrito}>Eliminar del Carrito</button> */}
+            <button onClick={eliminarCarrito}>Eliminar del Carrito</button>
         </div>
     )
 }
