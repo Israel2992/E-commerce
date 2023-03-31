@@ -1,0 +1,9 @@
+.productos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imagen{
+    width: 12rem;
+    height: 12rem;
+}

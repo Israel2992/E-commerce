@@ -1,21 +1,14 @@
 
+import { useState } from "react";
 import CarWidget from "../CarWidget/CarWidget";
 import './Navbar.css'
 import logo from './logo/icono_ecommerce.png'
 
 
-
-const NavBar = () => {
-
-
-    const opcRopaDeportiva = () => {
-        console.log(`click`)
-    }
-    
-
-
+const NavBar = ({totalCarrito}) => {
 
     
+        
     return (
         <nav className="Navbar">
 
@@ -25,12 +18,12 @@ const NavBar = () => {
             </div>
 
             <div className="categorias">
-                <button className="opcion" onClick={opcRopaDeportiva}> Ropa Deportiva</button>
+                <button className="opcion"> Ropa Deportiva      </button>
                 <button className="opcion"> Ropa de Caballero   </button>
                 <button className="opcion"> Ropa de Dama        </button>
                 <button className="opcion"> Contactos           </button>
             </div>
-            <CarWidget/>
+            <CarWidget cantidad_total={totalCarrito}/>
         </nav>
     )
 }

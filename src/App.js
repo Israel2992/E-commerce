@@ -1,22 +1,23 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header'
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
+
+  const [valor,setValor] = useState (0);
+
   return (
     <Fragment>
 
        <div className="App">
         
-         <Header
-            title = 'E-commerce'/>
+         <Header title = 'E-commerce'/>
         
-        <NavBar/>
+        <NavBar totalCarrito={valor}/>
           
-        <ItemListContainer 
-            text = 'Bienvenido ! '/>
+        <ItemListContainer setValor = {setValor}/>
         
        </div>
       
